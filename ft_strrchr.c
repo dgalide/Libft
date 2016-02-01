@@ -6,11 +6,11 @@
 /*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 15:10:04 by dgalide           #+#    #+#             */
-/*   Updated: 2015/11/30 20:45:29 by dgalide          ###   ########.fr       */
+/*   Updated: 2016/02/01 05:14:33 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char		*ft_strrchr(const char *s, int c)
 {

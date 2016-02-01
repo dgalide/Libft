@@ -6,11 +6,11 @@
 /*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 13:25:03 by dgalide           #+#    #+#             */
-/*   Updated: 2015/11/30 19:57:52 by dgalide          ###   ########.fr       */
+/*   Updated: 2016/02/01 05:11:17 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 int		ft_strcmp(const char *s1, const char *s2)
 {

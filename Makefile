@@ -6,7 +6,7 @@
 #    By: dgalide <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 17:42:00 by dgalide           #+#    #+#              #
-#    Updated: 2015/12/10 14:11:32 by dgalide          ###   ########.fr        #
+#    Updated: 2016/02/01 05:42:47 by dgalide          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,7 @@ SRC += ft_countwords.c
 SRC += ft_lenwords.c
 SRC += ft_maketab.c
 SRC += ft_printtab.c
+INC = includes/libft.h
 SRCO = $(SRC:.c=.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -84,7 +85,7 @@ all: $(NAME)
 re: fclean all
 
 .c.o:
-	$(CC) $(CFLAGS) -o $@ -c $<
+	$(CC) $(CFLAGS) -o $@ -c $< -I $(INC)
 
 $(NAME): $(SRCO)
 	ar rc $@ $^

@@ -6,11 +6,11 @@
 /*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 16:10:02 by dgalide           #+#    #+#             */
-/*   Updated: 2015/11/30 20:09:48 by dgalide          ###   ########.fr       */
+/*   Updated: 2016/02/01 05:10:47 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char	*ft_strcat(char *restrict s1, const char *restrict s2)
 {

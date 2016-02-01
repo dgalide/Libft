@@ -6,11 +6,11 @@
 /*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 17:31:00 by dgalide           #+#    #+#             */
-/*   Updated: 2015/12/08 16:24:00 by dgalide          ###   ########.fr       */
+/*   Updated: 2016/02/01 05:13:07 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char	*ft_strmap(const char *s, char (*f)(char))
 {

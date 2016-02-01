@@ -6,11 +6,11 @@
 /*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 16:59:37 by dgalide           #+#    #+#             */
-/*   Updated: 2015/12/08 16:20:31 by dgalide          ###   ########.fr       */
+/*   Updated: 2016/02/01 05:14:41 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char			**ft_strsplit(char const *s, char c)
 {
