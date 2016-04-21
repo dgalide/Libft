@@ -6,7 +6,7 @@
 /*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 19:44:34 by dgalide           #+#    #+#             */
-/*   Updated: 2016/01/28 11:52:35 by dgalide          ###   ########.fr       */
+/*   Updated: 2016/04/21 13:53:40 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ char				*ft_strdup(char *str);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t n);
 char				*ft_strjoin(const char *s1, const char *s2);
+char				*ft_strjoin_free(char **s1, char **s2, int bool_s1, int bool_s2);
 char				**ft_strsplit(const char *s, char c);
 char				**ft_maketab(int column, int line);
 
