@@ -6,11 +6,13 @@
 #    By: dgalide <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 17:42:00 by dgalide           #+#    #+#              #
-#    Updated: 2016/02/01 05:42:47 by dgalide          ###   ########.fr        #
+#    Updated: 2016/05/31 16:18:15 by dgalide          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+SRC += get_next_line.c
 SRC += ft_atoi.c
 SRC += ft_itoa.c
 SRC += ft_bzero.c
