@@ -6,7 +6,7 @@
 /*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 19:44:34 by dgalide           #+#    #+#             */
-/*   Updated: 2016/04/21 13:53:40 by dgalide          ###   ########.fr       */
+/*   Updated: 2016/05/31 16:15:56 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
+
+# define BUFF_SIZE 10
 
 typedef struct		s_list
 {
@@ -52,6 +55,7 @@ void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_memcpy(void	*dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
+int					get_next_line(int fd, char **line);
 int					ft_countwords(const char *s, char c);
 int					ft_lenwords(const char *s, char c, int word);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
