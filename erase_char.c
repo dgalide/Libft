@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   erase_char.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 17:17:51 by dgalide           #+#    #+#             */
-/*   Updated: 2016/03/04 21:52:06 by dgalide          ###   ########.fr       */
+/*   Created: 2016/02/04 05:18:05 by dgalide           #+#    #+#             */
+/*   Updated: 2016/03/04 21:49:33 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
-char	*ft_strdup(char *str)
+void				erase_char(char **str, char c, int start)
 {
+	char	*tmp;
+	char	*tmp2;
 	int		i;
-	char	*dup;
+	int		k;
 
 	i = 0;
-	if (!str)
-		return (NULL);
-	dup = (char *)malloc(ft_strlen(str) + 1);
-	if (dup == NULL)
-		return (NULL);
-	else
+	k = 0;
+	tmp = (char *)malloc(sizeof(char) * (ft_strlen(*str) + 1));
+	tmp2 = ft_strdup(*str);
+	while (tmp2[k])
 	{
-		while (str[i])
+		if (tmp2[k] == c && k != start)
+			k++;
+		else
 		{
-			dup[i] = str[i];
+			tmp[i] = tmp2[k];
 			i++;
+			k++;
 		}
-		dup[i] = '\0';
-		return (dup);
 	}
+	tmp[i] = '\0';
+	ft_memdel((void **)str);
+	ft_memdel((void **)&tmp2);
+	*str = tmp;
 }

@@ -6,7 +6,7 @@
 /*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 19:44:34 by dgalide           #+#    #+#             */
-/*   Updated: 2016/05/31 16:15:56 by dgalide          ###   ########.fr       */
+/*   Updated: 2016/02/03 02:04:22 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <fcntl.h>
-# include "../printf/includes/ft_printf.h"
-
-# define BUFF_SIZE 10
 
 typedef struct		s_list
 {
@@ -34,6 +30,8 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *newi);
 void				ft_lstiter(t_list *alst, void (*f)(t_list *elem));
 
+long				ft_power(int n, int power);
+void				erase_char(char **line, char c, int start);
 void				ft_printtab(char **tab);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *str, int fd);
@@ -56,14 +54,14 @@ void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_memcpy(void	*dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
-int					ft_printf(const char *format, ...);
-int					get_next_line(int fd, char **line);
 int					ft_countwords(const char *s, char c);
 int					ft_lenwords(const char *s, char c, int word);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+int					ft_atoi_base(char *str, int base);
 int					ft_atoi(const char *str);
+int					ft_atoi_del(char **str);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
@@ -75,9 +73,12 @@ int					ft_tolower(int c);
 int					ft_toupper(int c);
 int					ft_strequ(const char *s1, const char *s2);
 int					ft_strnequ(const char *s1, const char *s2, size_t n);
+int					check_line(char *str, int c);
 
-char				*ft_unsigned_itoa(unsigned long long n, int base);
-char				*ft_itoa(intmax_t n, int base);
+char				*ft_itoa(intmax_t nb, int base);
+char				*ft_unsigned_itoa(unsigned long long nb, int base);
+char				*ft_strjoin_free(char **s1, char **s2,
+										int bool1, int bool2);
 char				*ft_strmap(const char *s, char (*f)(char));
 char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char				*ft_strcat(char *s1, const char *s2);
@@ -93,7 +94,6 @@ char				*ft_strdup(char *str);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t n);
 char				*ft_strjoin(const char *s1, const char *s2);
-char				*ft_strjoin_free(char **s1, char **s2, int bool_s1, int bool_s2);
 char				**ft_strsplit(const char *s, char c);
 char				**ft_maketab(int column, int line);
 

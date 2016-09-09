@@ -6,7 +6,7 @@
 /*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 15:47:44 by dgalide           #+#    #+#             */
-/*   Updated: 2016/04/21 13:54:10 by dgalide          ###   ########.fr       */
+/*   Updated: 2016/03/04 21:52:21 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char		*ft_strjoin_free(char **s1, char **s2, int bool_s1, int bool_s2)
 		str[i] = (*s1)[i];
 		i++;
 	}
-	if (bool_s1 && (*s1))
+	if ((*s1) && bool_s1)
 		ft_memdel((void **)s1);
 	while ((*s2) && (*s2)[j])
 	{
@@ -57,7 +57,7 @@ char		*ft_strjoin_free(char **s1, char **s2, int bool_s1, int bool_s2)
 		j++;
 		i++;
 	}
-	if (bool_s2 && (*s2))
+	if ((*s2) && bool_s2)
 		ft_memdel((void **)s2);
 	return (str);
 }

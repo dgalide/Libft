@@ -6,7 +6,7 @@
 /*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 15:46:10 by dgalide           #+#    #+#             */
-/*   Updated: 2016/02/01 05:04:08 by dgalide          ###   ########.fr       */
+/*   Updated: 2016/05/01 18:20:26 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int				ft_atoi(const char *str)
 	i = 0;
 	r = 0;
 	n = 0;
+	if (!str)
+		return (0);
 	st = (char *)str;
 	while (ft_espace(&st[i]))
 		i++;
@@ -47,5 +49,33 @@ int				ft_atoi(const char *str)
 		r = r * 10 + st[i] - 48;
 		i++;
 	}
+	return (n != 0 ? -r : r);
+}
+
+int				ft_atoi_del(char **str)
+{
+	size_t	i;
+	size_t	r;
+	size_t	n;
+
+	i = 0;
+	r = 0;
+	n = 0;
+	if (!(*str))
+		return (0);
+	while (ft_espace(&(*str)[i]))
+		i++;
+	if ((*str)[i] == '+' || (*str)[i] == '-')
+	{
+		if ((*str)[i] == '-')
+			n++;
+		i++;
+	}
+	while ((*str)[i] >= '0' && (*str)[i] <= '9' && (*str))
+	{
+		r = r * 10 + (*str)[i] - 48;
+		i++;
+	}
+	ft_memdel((void **)str);
 	return (n != 0 ? -r : r);
 }

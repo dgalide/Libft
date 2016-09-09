@@ -6,7 +6,7 @@
 /*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 13:33:00 by dgalide           #+#    #+#             */
-/*   Updated: 2016/02/01 05:08:53 by dgalide          ###   ########.fr       */
+/*   Updated: 2016/03/04 21:50:56 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void		*ft_memset(void *b, int c, size_t len)
 
 	i = 0;
 	str = (unsigned char *)b;
-	if (len)
+	if (len > 0)
 	{
 		while (i < len)
 		{

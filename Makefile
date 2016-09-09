@@ -77,6 +77,25 @@ SRC += ft_countwords.c
 SRC += ft_lenwords.c
 SRC += ft_maketab.c
 SRC += ft_printtab.c
+SRC += ft_unsigned_itoa.c
+SRC +=	printf/main.c 			\
+		printf/load_struct.c 	\
+		printf/utils.c 		\
+		printf/search.c 		\
+		printf/get.c 			\
+		printf/func.c 			\
+		printf/handlers/unsigned_decimal_handler.c \
+		printf/handlers/decimal_handler.c \
+		printf/handlers/percent_handler.c \
+		printf/handlers/hexadecimal_handler.c \
+		printf/handlers/wchar_handler.c \
+		printf/handlers/wstring_handler.c \
+		printf/handlers/octal_handler.c \
+		printf/handlers/string_handler.c 	\
+		printf/handlers/char_handler.c \
+		printf/handlers/pointer_handler.c
+
+
 INC = includes/libft.h
 SRCO = $(SRC:.c=.o)
 CC = gcc
