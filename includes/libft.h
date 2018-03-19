@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dgalide <dgalide@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 19:44:34 by dgalide           #+#    #+#             */
-/*   Updated: 2016/10/05 10:50:40 by dgalide          ###   ########.fr       */
+/*   Updated: 2018/03/19 15:01:40 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,4 +101,7 @@ char				**ft_maketab(int column, int line);
 
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
+char				**ft_tab_cpy(char **src, char **dst);
+void				ft_tab_del(char **tab);
+char				**ft_tab_join(char **t1, char **t2, int b1, int b2);
 #endif
