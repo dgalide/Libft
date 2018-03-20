@@ -6,7 +6,7 @@
 /*   By: dgalide <dgalide@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 19:44:34 by dgalide           #+#    #+#             */
-/*   Updated: 2018/03/19 15:01:40 by dgalide          ###   ########.fr       */
+/*   Updated: 2018/03/20 15:46:57 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *newi);
 void				ft_lstiter(t_list *alst, void (*f)(t_list *elem));
+
+size_t				ft_tablen(char **tab);
 
 void				ft_printtab(char **tab);
 void				ft_putchar_fd(char c, int fd);
@@ -95,7 +97,8 @@ char				*ft_strdup(char *str);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t n);
 char				*ft_strjoin(const char *s1, const char *s2);
-char				*ft_strjoin_free(char **s1, char **s2, int bool_s1, int bool_s2);
+char				*ft_strjoin_free(char **s1, char **s2,
+	int bool_s1, int bool_s2);
 char				**ft_strsplit(const char *s, char c);
 char				**ft_maketab(int column, int line);
 

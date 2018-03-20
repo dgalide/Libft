@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dgalide <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dgalide <dgalide@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 14:49:27 by dgalide           #+#    #+#             */
-/*   Updated: 2016/03/04 21:52:55 by dgalide          ###   ########.fr       */
+/*   Updated: 2018/03/20 15:44:02 by dgalide          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@ size_t		ft_strlen(const char *str)
 
 	i = 0;
 	while (str && str[i])
+		i++;
+	return (i);
+}
+
+size_t		ft_tablen(char **tab)
+{
+	int i;
+
+	i = 0;
+	while (tab && tab[i])
 		i++;
 	return (i);
 }
